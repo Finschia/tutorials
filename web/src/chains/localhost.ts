@@ -11,7 +11,7 @@ const linkPriceStep = { low: 0.015, average: 0.015, high: 0.015 };
 export const chainInfo = {
   chainId: "simd-testing",
   chainName: "simd-testing",
-  rpc: "localhost:26657",
+  rpc: "http://localhost:26657",
   rest: "http://localhost:1317",
   bip44: linkBip44,
   bech32Config: {
