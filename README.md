@@ -1,7 +1,9 @@
 # Hackathon
 
-## History
+## List
 
-## Reference
-* [Hackathon](https://en.wikipedia.org/wiki/Hackathon)
-* [Integrating with DOSI Vault]()
+- [HackWasm Berlin 2023](./announcements/2023hackwasm.md)
+
+## Documentation
+- [DOSI Vault](./dosi-vault/README.md)
+- [Smart Contract Guide]()
