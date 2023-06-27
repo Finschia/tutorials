@@ -10,7 +10,6 @@ Install dependencies
 
 ```
 npm install
-
 ```
 
 Run development Server
@@ -18,8 +17,6 @@ Run development Server
 ```
 npm run dev
 ```
-
-For more details see comments on `src/main.js`.
 
 ## Chain for test
 
