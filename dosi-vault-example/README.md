@@ -1,6 +1,6 @@
 # Dosi vault Example
 
-This is a simple example if how to Dosi vault extension injects the offline signer that is compatible with cosmJS.
+This is a simple example if how to Dosi vault extension injects the offline signer that is compatible with finschia-js.
 
 ![](splash.png)
 
