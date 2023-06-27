@@ -15,8 +15,8 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 
-import { chainInfo as finschiaReleaseChainInfo } from "../chains/finschiaRelease";
 import { chainInfo as localhostChainInfo } from "../chains/localhost";
+import { chainInfo as localhost2ChainInfo } from "../chains/localhost2";
 import { suggestChain } from "../chains/suggestChain";
 
 interface NetInfoBoardProps {
@@ -225,7 +225,7 @@ function RelayerInfo({ chainInfo }: NetInfoBoardProps) {
 }
 
 export default function Dashboard() {
-  const chainInfoList = [localhostChainInfo, finschiaReleaseChainInfo];
+  const chainInfoList = [localhostChainInfo, localhost2ChainInfo];
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Box sx={{ width: "60%" }}>

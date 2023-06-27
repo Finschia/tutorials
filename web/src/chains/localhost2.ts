@@ -1,5 +1,3 @@
-import { ChainInfo } from "@keplr-wallet/types";
-
 const linkCurrency = {
   coinDenom: "FNSA",
   coinMinimalDenom: "cony",
@@ -10,13 +8,11 @@ const linkCurrency = {
 const linkBip44 = { coinType: 438 };
 const linkPriceStep = { low: 0.015, average: 0.015, high: 0.015 };
 
-export const chainInfo: ChainInfo = {
-  chainId: "finschia-2",
-  chainName: "Finschia",
-  rpc: "https://dsvt-finschia-api.line-apps.com",
-  rest: "https://dsvt-finschia.line-apps.com", // no usage
-  walletUrl: "https://scan.blockchain.line.me/Finschia%20Mainnet",
-  stakeCurrency: linkCurrency,
+export const chainInfo = {
+  chainId: "simd-testing",
+  chainName: "simd-testing",
+  rpc: "http://localhost:26659",
+  rest: "http://localhost:1318",
   bip44: linkBip44,
   bech32Config: {
     bech32PrefixAccAddr: "link",
@@ -27,6 +23,7 @@ export const chainInfo: ChainInfo = {
     bech32PrefixConsPub: "linkvalconspub",
   },
   currencies: [linkCurrency],
-  features: ["cosmwasm"],
   feeCurrencies: [{ ...linkCurrency, gasPriceStep: linkPriceStep }],
+  stakeCurrency: linkCurrency,
+  features: ["cosmwasm"],
 };
