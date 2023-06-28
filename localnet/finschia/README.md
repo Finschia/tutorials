@@ -1,5 +1,9 @@
 # Local finschia single node development network
 
+### Requirements
+
+- Required: docker
+
 ## Starting the blockchain
 
 Run the following:
