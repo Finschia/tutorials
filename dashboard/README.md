@@ -10,6 +10,10 @@
 
 In the project directory, you can run:
 
+### `npm install`
+
+Install packages that app depends on. This command should be run before other commands.
+
 ### `npm start`
 
 Runs the app in the development mode.\
