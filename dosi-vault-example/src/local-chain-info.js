@@ -5,6 +5,8 @@ export const linkCurrency = {
   coinGeckoId: "link",
 };
 
+// FINSCHIA's coin type is 438.
+// https://github.com/satoshilabs/slips/blob/3e7b1032daf6194cde5a243e17ba1f02d8f11f66/slip-0044.md?plain=1#L469
 export const linkBip44 = { coinType: 438 };
 export const linkPriceStep = { low: 0.015, average: 0.015, high: 0.015 };
 

@@ -1,6 +1,6 @@
 # Dosi vault Example
 
-This is a simple example if how to Dosi vault extension injects the offline signer that is compatible with finschia-js.
+This is a simple example if how to Dosi vault extension injects the offline signer that is compatible with [finschia-js](https://github.com/Finschia/finschia-js).
 
 ![](splash.png)
 
