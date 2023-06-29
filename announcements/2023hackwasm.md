@@ -12,8 +12,6 @@ For this challenge, participants are encouraged to develop a CosmWasm contract. 
 * We value creativity over implementation. However, in the absence of originality, the completeness of the DApp becomes a crucial factor in the evaluation process.
 
 # Resources
-* [Config]()
-  * `config.toml`, `app.toml`, `genesis.json`
-* [Dashborad]()
-- [DOSI Vault](../dosi-vault/README.md)
+- [Dashborad]()
+- [DOSI Vault Guide](../dosi-vault/README.md)
 - [Smart Contract Guide]()
