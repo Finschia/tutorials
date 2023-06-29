@@ -3,7 +3,7 @@ import { SigningFinschiaClient, FinschiaClient } from "@finschia/finschia";
 import { TxRaw } from "@finschia/finschia-proto/cosmos/tx/v1beta1/tx";
 import "../dosivault-logo.png";
 
-import { chainInfo } from "./local-chain-info";
+import { chainInfo, linkCurrency } from "./local-chain-info";
 
 window.onload = async () => {
   if (!window.dosiVault) {
@@ -42,13 +42,13 @@ function getInputData() {
 function submitOnClicked(e) {
   const { recipient, amount } = getInputData();
   const amountFinal = {
-    denom: "cony",
+    denom: linkCurrency.coinMinimalDenom,
     amount: amount.toString(),
   };
   const fee = {
     amount: [
       {
-        denom: "cony",
+        denom: linkCurrency.coinMinimalDenom,
         amount: "5000",
       },
     ],
