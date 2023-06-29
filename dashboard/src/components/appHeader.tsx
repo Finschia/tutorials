@@ -2,7 +2,6 @@ import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 
 import FinschiaDocsImage from "../images/finschia_docs_logo_horizontal.svg";
-import GithubImage from "../images/github-logo-vector.svg";
 
 export default function AppHeader() {
   return (
