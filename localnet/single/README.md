@@ -6,20 +6,27 @@
 
 ## Starting the blockchain
 
-Run the following:
-
+### Run with local binary
 ```shell
-cd ./finschia
+./start_local.sh
+```
+
+### Run with docker
+```shell
+# Start the Finschia node
 ./start.sh
+
+# Stop the Finschia node
+./stop.sh
 ```
 
 ## How to change and generate default genesis and configurations
 
-1. change the docker image you want in the `./finschia/env` file.
-2. cd `./finschia/template`.
+1. change the docker image you want in the `./single/env` file.
+2. cd `./single/template`.
 3. execute `setup.sh docker`.
 4. check the difference of `app.toml`, `client.toml`, `config.toml` and
-   `genesis.json` in the `./finschia/template/.finschia/config` directory
+   `genesis.json` in the `./single/template/.finschia/config` directory
    and select the code you want.
 
 ## Accounts
