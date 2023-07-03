@@ -1,0 +1,17 @@
+{
+    "type": "cosmos",
+    "value": {
+    "key": "rly1",
+    "chain-id": "finschia-ibc-counterpart",
+    "rpc-addr": "https://hackwasm-ibc-counterpart-node.finschia.network:26657",
+    "grpc-addr": "https://hackwasm-ibc-counterpart-node.finschia.network:9090",
+    "account-prefix": "link",
+    "keyring-backend": "test",
+    "gas-adjustment": 1.5,
+    "gas-prices": "0.0001brown",
+    "debug": true,
+    "timeout": "10s",
+    "output-format": "json",
+    "sign-mode": "direct"
+    }
+ }
