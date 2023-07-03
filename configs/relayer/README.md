@@ -13,6 +13,9 @@ chmod +x rly-setup.sh
 # Run the relayer
 ## Option 1. - Only when make a IBC connection at first
 rly link-then-start
+fnsad query ibc connection path <client_id> # Get the connection ID
+fnsad query ibc channel connections <connection_id> # Get the channel ID
+
 ## Option 2. - Start the relayer when the IBC connection is already made
 rly start
 
