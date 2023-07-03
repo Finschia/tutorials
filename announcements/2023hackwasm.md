@@ -12,6 +12,18 @@ For this challenge, participants are encouraged to develop a CosmWasm contract. 
 * We value creativity over implementation. However, in the absence of originality, the completeness of the DApp becomes a crucial factor in the evaluation process.
 
 # Resources
+## 1. Finschia Binary
+```shell
+git clone --depth 1 --branch v1.0.0-dynamiclink1 git@github.com:Finschia/finschia.git
+make install
+```
+
+### 1-1. Using Localnet for Development
+[Here](https://github.com/Finschia/hackathon/tree/main/localnet)
+
+### 1-2. Joining Testnet
+
+## 2. Useful Links
 - [Dashborad]()
 - [DOSI Vault Guide](../dosi-vault/README.md)
 - [Smart Contract Guide]()
