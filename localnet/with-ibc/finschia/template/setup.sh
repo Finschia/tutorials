@@ -8,8 +8,8 @@ SCRIPT_DIR="$(realpath "$(dirname "$0")")"
 # shellcheck disable=SC1091
 source "$SCRIPT_DIR"/../env
 
-CHAIN_ID="simd-testing"
-MONIKER="simd-testing"
+CHAIN_ID="finschia-0"
+MONIKER="finschia-0"
 CONFIG_DIR=${SCRIPT_DIR}/.finschia
 CHAIN_DIR=${CONFIG_DIR}
 
@@ -33,7 +33,7 @@ rm -rf $CONFIG_DIR
 
 # Initialize configuration files and genesis file
 # moniker is the name of your node
-${FNSAD} init simd-testing --chain-id=$CHAIN_ID --home=${CHAIN_DIR}
+${FNSAD} init finschia-0 --chain-id=$CHAIN_ID --home=${CHAIN_DIR}
 
 # configure for testnet
 if [[ ${mode} == "testnet" ]]
