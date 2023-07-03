@@ -20,7 +20,7 @@ echo "Using temporary dir $TMP_DIR"
 FINSCHIA_LOGFILE="$TMP_DIR/finschia2.log"
 
 # Use a fresh volume for every start
-docker volume rm -f fnsad_data
+docker volume rm -f fnsad2_data
 
 docker run --rm \
   --name "$CONTAINER_NAME" \
@@ -28,7 +28,7 @@ docker run --rm \
   -p "$API_PORT_HOST":"$API_PORT_GUEST" \
   -p "$GRPC_PORT_HOST":"$GRPC_PORT_GUEST" \
   --mount type=bind,source="$SCRIPT_DIR/template",target=/template \
-  --mount type=volume,source=fnsad_data,target=/root \
+  --mount type=volume,source=fnsad2_data,target=/root \
   "$REPOSITORY:$VERSION" \
   /template/run_finschia.sh \
   >"$FINSCHIA_LOGFILE" 2>&1 &

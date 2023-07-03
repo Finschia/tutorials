@@ -33,7 +33,7 @@ rm -rf $CONFIG_DIR
 
 # Initialize configuration files and genesis file
 # moniker is the name of your node
-${FNSAD} init simd-testing --chain-id=$CHAIN_ID --home=${CHAIN_DIR}
+${FNSAD} init finschia2-0 --chain-id=$CHAIN_ID --home=${CHAIN_DIR}
 
 # configure for testnet
 if [[ ${mode} == "testnet" ]]

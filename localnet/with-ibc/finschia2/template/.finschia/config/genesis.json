@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-07-03T17:35:27.595207Z",
+  "genesis_time": "2023-07-03T18:45:12.454328Z",
   "chain_id": "finschia2-0",
   "initial_height": "1",
   "consensus_params": {
@@ -373,7 +373,7 @@
                 "validator_address": "linkvaloper1twsfmuj28ndph54k4nw8crwu8h9c8mh33lyrp8",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "hd9lZMBP1LFvGPmYoGJf1QRw/aRaT+tkQ8Ot0kzgE44="
+                  "key": "np0JNTCAsE678bQc5YOT9OTib0bqivkkCSuB/hnXp4Q="
                 },
                 "value": {
                   "denom": "stake",
@@ -381,7 +381,7 @@
                 }
               }
             ],
-            "memo": "f0eaf9abe7850992c11a1cd99251ff1eb565410d@172.30.1.14:26656",
+            "memo": "adb55d931ef3dfcb1aa3e7f8b1fb2a65b0c95993@172.30.1.14:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -409,7 +409,7 @@
             }
           },
           "signatures": [
-            "wVcDlkJDn0wsLO5mKmiU1fl/YMYxEO6MF5lbEUj0P3JEFGWLiJu2n9D5rxA69ByZgNINHnSyV3x2i6eX6rrNZA=="
+            "QJBA+IwhNjNO77fNo+pK0Kr2jGlKGmd3U41r5+qTCZZhoheq0f6KYlSvyOfijnexxeSrz3LIxMKtG+fQ+gYqRw=="
           ]
         }
       ]
