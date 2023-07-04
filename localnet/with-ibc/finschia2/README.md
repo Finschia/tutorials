@@ -1,4 +1,4 @@
-# Local finschia single node development network
+# Local finschia2 single node development network
 
 ### Requirements
 
@@ -7,11 +7,13 @@
 ## Starting the blockchain
 
 ### Run with local binary
+
 ```shell
 ./start_local.sh
 ```
 
 ### Run with docker
+
 ```shell
 # Start the Finschia node
 ./start.sh
@@ -31,7 +33,7 @@
 
 ## Accounts
 
-Through setup.sh, 11 accounts added to genesis. Every accounts are derived from same mnemonic (`mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have`) and every accounts have same amount of balances (`100000000000cony,20000000000stake`).
+Through setup.sh, 11 accounts added to genesis. Every accounts are derived from same mnemonic (`mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have`) and every accounts have same amount of balances (`100000000000brown,20000000000stake`).
 
 - 1 validator account : hdpath(44/438/1/0/0)
 - 9 ordinary account: hdpath(44/438/0/0/0~8)
