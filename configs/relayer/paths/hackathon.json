@@ -1,0 +1,16 @@
+{
+    "src": {
+      "chain-id": "finschia-ibc-base",
+      "client-id": "",
+      "connection-id": ""
+    },
+    "dst": {
+      "chain-id": "finschia-ibc-counterpart",
+      "client-id": "",
+      "connection-id": ""
+    },
+    "src-channel-filter": {
+      "rule": null,
+      "channel-list": []
+    }
+}
