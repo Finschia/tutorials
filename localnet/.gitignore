@@ -1,3 +1,5 @@
 test_chain_data
 
 with-ibc/relayer-code
+
+.DS_store

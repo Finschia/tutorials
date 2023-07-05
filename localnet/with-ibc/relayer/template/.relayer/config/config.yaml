@@ -1,0 +1,59 @@
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: ""
+  light-cache-size: 20
+chains:
+  finschia-0:
+    type: cosmos
+    value:
+      key-directory: /Users/user/.relayer/keys/finschia-0
+      key: testkey
+      chain-id: finschia-0
+      rpc-addr: http://host.docker.internal:26657
+      account-prefix: link
+      keyring-backend: test
+      gas-adjustment: 1.5
+      gas-prices: 0.001cony
+      min-gas-amount: 0
+      debug: true
+      timeout: 10s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: null
+      broadcast-mode: batch
+  finschia2-0:
+    type: cosmos
+    value:
+      key-directory: /Users/user/.relayer/keys/finschia2-0
+      key: testkey
+      chain-id: finschia2-0
+      rpc-addr: http://host.docker.internal:26557
+      account-prefix: link
+      keyring-backend: test
+      gas-adjustment: 1.5
+      gas-prices: 0.001brown
+      min-gas-amount: 0
+      debug: true
+      timeout: 10s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: null
+      broadcast-mode: batch
+paths:
+  finschia-finschia:
+    src:
+      chain-id: finschia-0
+      client-id: 07-tendermint-0
+      connection-id: connection-0
+    dst:
+      chain-id: finschia2-0
+      client-id: 07-tendermint-0
+      connection-id: connection-0
+    src-channel-filter:
+      rule: ""
+      channel-list: []
