@@ -8,11 +8,6 @@ if [[ ! -x "$(which jq)" ]]; then
   exit 1
 fi
 
-if [[ ! -x "$(which rly)" ]]; then
-  echo "Relayer is required..."
-  $SCRIPTDIR/scripts/get-relayer.sh
-fi
-
 echo "Start chains"
 $SCRIPTDIR/scripts/start-chains.sh
 
