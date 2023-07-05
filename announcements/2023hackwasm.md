@@ -14,7 +14,7 @@ For this challenge, participants are encouraged to develop a CosmWasm contract. 
 # Resources
 ## 1. Finschia Binary
 ```shell
-git clone --depth 1 --branch v1.0.0-dynamiclink1 git@github.com:Finschia/finschia.git
+git clone --depth 1 --branch v1.0.0-dynamiclink2 git@github.com:Finschia/finschia.git
 make install
 ```
 
@@ -22,8 +22,17 @@ make install
 [Here](https://github.com/Finschia/hackathon/tree/main/localnet)
 
 ### 1-2. Joining Testnet
+* ibc-base testnet
+  * [REST API](https://hackwasm-node.finschia.network:1317)
+  * [gRPC](https://hackwasm-node.finschia.network:9090)
+  * [Ostracon RPC](https://hackwasm-node.finschia.network:26657)
+
+* ibc-counterpart testnet
+  * [REST API](https://hackwasm-ibc-counterpart-node.finschia.network:1317)
+  * [gRPC](https://hackwasm-ibc-counterpart-node.finschia.network:9090)
+  * [Ostracon RPC](https://hackwasm-ibc-counterpart-node.finschia.network:26657)
 
 ## 2. Useful Links
 - [Dashborad]()
 - [DOSI Vault Guide](../dosi-vault/README.md)
-- [Smart Contract Guide]()
+- [Smart Contract Guide](https://docs.finschia.network/smart-contract/introduction)
