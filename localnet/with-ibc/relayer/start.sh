@@ -11,11 +11,11 @@ chmod 777 "$TMP_DIR"
 echo "Using temporary dir $TMP_DIR"
 RELAYER_LOGFILE="$TMP_DIR/relayer.log"
 
-docker run --rm \
+docker run \
   --name "$CONTAINER_NAME" \
   --mount type=bind,source="$SCRIPT_DIR/template",target=/template \
   "$REPOSITORY:$VERSION" \
-  /template/run_finschia.sh \
+  /template/run_relayer.sh \
   >"$RELAYER_LOGFILE" 2>&1 &
 
 echo "relayer running and logging into $RELAYER_LOGFILE"

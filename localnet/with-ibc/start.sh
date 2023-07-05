@@ -16,11 +16,5 @@ fi
 echo "Start chains"
 $SCRIPTDIR/scripts/start-chains.sh
 
-echo "Configure relayer and create connection"
-$SCRIPTDIR/scripts/configure-relayer.sh
-
-echo "Show connections between finschia-0 and finschia2-0"
-rly q channels finschia-0 finschia2-0
-
 echo "Start relayer"
 $SCRIPTDIR/relayer/start.sh
