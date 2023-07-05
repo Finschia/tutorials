@@ -12,8 +12,26 @@ For this challenge, participants are encouraged to develop a CosmWasm contract. 
 * We value creativity over implementation. However, in the absence of originality, the completeness of the DApp becomes a crucial factor in the evaluation process.
 
 # Resources
-* [Config]()
-  * `config.toml`, `app.toml`, `genesis.json`
-* [Dashborad]()
-- [DOSI Vault](../dosi-vault/README.md)
-- [Smart Contract Guide]()
+## 1. Finschia Binary
+```shell
+git clone --depth 1 --branch v1.0.0-dynamiclink2 git@github.com:Finschia/finschia.git
+make install
+```
+
+### 1-1. Using Localnet for Development
+[Here](https://github.com/Finschia/hackathon/tree/main/localnet)
+
+### 1-2. Joining Testnet
+|          Name           |     Type     | Address                                                      |
+| :---------------------: | :----------: | :----------------------------------------------------------- |
+|    ibc-base testnet     |   REST API   | https://hackwasm-node.finschia.network:1317                  |
+|                         |     gRPC     | https://hackwasm-node.finschia.network:9090                  |
+|                         | Ostracon RPC | https://hackwasm-node.finschia.network:26657                 |
+| ibc-counterpart testnet |   REST API   | https://hackwasm-ibc-counterpart-node.finschia.network:1317  |
+|                         |     gRPC     | https://hackwasm-ibc-counterpart-node.finschia.network:9090  |
+|                         | Ostracon RPC | https://hackwasm-ibc-counterpart-node.finschia.network:26657 |
+
+## 2. Useful Links
+- [Dashborad]()
+- [DOSI Vault Guide](../dosi-vault/README.md)
+- [Smart Contract Guide](https://docs.finschia.network/smart-contract/introduction)

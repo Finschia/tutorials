@@ -12,7 +12,7 @@
 > DOSI Valut was forked from Keplr. Therefore, please refer to [this](https://docs.keplr.app/api/) documentation for information not described here.
 
 ## Check if DOSI Vault is installed in Chrome
-If DOSI Valut is installed in Chrome, `window` object always includes `dosiVault` object. Below is an example of checking the `dosiVault` object.
+If [DOSI Valut](https://vault.dosi.world/) is installed in Chrome, `window` object always includes `dosiVault` object. Below is an example of checking the `dosiVault` object.
 
 ```js
 if(!window.dosiVault){
