@@ -11,9 +11,13 @@ chmod 777 "$TMP_DIR"
 echo "Using temporary dir $TMP_DIR"
 RELAYER_LOGFILE="$TMP_DIR/relayer.log"
 
-docker run \
+# Use a fresh volume for every start
+docker volume rm -f relayer_data
+
+docker run --rm \
   --name "$CONTAINER_NAME" \
   --mount type=bind,source="$SCRIPT_DIR/template",target=/template \
+  --mount type=volume,source=relayer_data,target=/root \
   "$REPOSITORY:$VERSION" \
   /template/run_relayer.sh \
   >"$RELAYER_LOGFILE" 2>&1 &
