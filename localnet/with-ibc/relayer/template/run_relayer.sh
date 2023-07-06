@@ -2,18 +2,26 @@
 set -o errexit -o nounset -o pipefail
 command -v shellcheck >/dev/null && shellcheck "$0"
 
-TEST_MNEMONIC="mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have"
-COINID=438
+file_path=".relayer/config/config.yaml"
 
-echo "Generating rly configurations..."
-rly config init
-rly chains add-dir /template/configs/chains
+if [ -f "$file_path" ]; then
+  echo "The file $file_path exists."
+else
+  echo "The file $file_path does not exist."
 
-echo "Key $(rly keys restore finschia-0 testkey2 "$TEST_MNEMONIC" --coin-type $COINID) imported from finschia-0 to relayer..."
-echo "Key $(rly keys restore finschia2-0 testkey2 "$TEST_MNEMONIC" --coin-type $COINID) imported from finschia2-0 to relayer..."
+  TEST_MNEMONIC="mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have"
+  COINID=438
 
-rly paths add-dir /template/configs/paths
+  echo "Generating rly configurations..."
+  rly config init
+  rly chains add-dir /template/configs/chains
 
-rly tx link finschia-finschia -d -t 3s
+  echo "Key $(rly keys restore finschia-0 testkey2 "$TEST_MNEMONIC" --coin-type $COINID) imported from finschia-0 to relayer..."
+  echo "Key $(rly keys restore finschia2-0 testkey2 "$TEST_MNEMONIC" --coin-type $COINID) imported from finschia2-0 to relayer..."
 
-rly start
+  rly paths add-dir /template/configs/paths
+
+  rly tx link finschia-finschia -d -t 3s
+fi
+
+rly start finschia-finschia

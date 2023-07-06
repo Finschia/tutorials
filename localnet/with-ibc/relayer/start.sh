@@ -17,7 +17,7 @@ docker volume rm -f relayer_data
 docker run --rm \
   --name "$CONTAINER_NAME" \
   --mount type=bind,source="$SCRIPT_DIR/template",target=/template \
-  --mount type=volume,source=relayer_data,target=/root \
+  --mount type=volume,source=relayer_data,target=/home/relayer \
   "$REPOSITORY:$VERSION" \
   /template/run_relayer.sh \
   >"$RELAYER_LOGFILE" 2>&1 &
