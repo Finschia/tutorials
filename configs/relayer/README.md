@@ -13,6 +13,7 @@ fnsad query ibc connection path <client_id> # Get the connection ID
 fnsad query ibc channel connections <connection_id> # Get the channel ID
 
 ## Option 2. - Start the relayer when the IBC connection is already made
+# After populate the IBC client ID and connection ID in the path file
 rly start
 
 # Health Check
