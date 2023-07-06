@@ -19,7 +19,7 @@ make install
 ```
 
 ### 1-1. Using Localnet for Development
-[Here](https://github.com/Finschia/hackathon/tree/main/localnet)
+We support a single-chain environment, or a dual-chain environment with IBC for development. Please refer to the following [link](https://github.com/Finschia/hackathon/tree/main/localnet) for more information.
 
 ### 1-2. Joining Testnet
 |          Name           |     Type     | Address                                                      |
@@ -32,6 +32,6 @@ make install
 |                         | Ostracon RPC | https://hackwasm-ibc-counterpart-node.finschia.network:26657 |
 
 ## 2. Useful Links
-- [Dashborad]()
+- [Dashborad](https://fnsadash.landpress.line.me)
 - [DOSI Vault Guide](../dosi-vault/README.md)
 - [Smart Contract Guide](https://docs.finschia.network/smart-contract/introduction)
