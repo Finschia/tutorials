@@ -21,7 +21,7 @@ mkdir -p "$RLYPATH_DIR"
 
 curl -o "$RLYCHAIN_DIR"/finschia-ibc-base.json https://raw.githubusercontent.com/Finschia/hackathon/main/configs/relayer/chains/finschia-ibc-base.json
 curl -o "$RLYCHAIN_DIR"/finschia-ibc-counterpart.json https://raw.githubusercontent.com/Finschia/hackathon/main/configs/relayer/chains/finschia-ibc-counterpart.json
-curl -o "$RLYPATH_DIR"/base-counterpart.json https://raw.githubusercontent.com/Finschia/hackathon/main/configs/relayer/paths/hackathon.json
+curl -o "$RLYPATH_DIR"/hackathon.json https://raw.githubusercontent.com/Finschia/hackathon/main/configs/relayer/paths/hackathon.json
 
 rly config init
 rly chains add-dir "$RLYCHAIN_DIR"
