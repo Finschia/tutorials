@@ -2,7 +2,7 @@
 
 ### Requirements
 
-- Required: docker, jq
+- Required: docker, jq, docker-compose
 
 ## Starting the blockchain
 
@@ -10,10 +10,12 @@
 
 ```shell
 # Start the Finschia nodes and IBC relayer
-./start.sh
+docker-compose up -d
 
 # Stop the Finschia nodes and IBC relayer
-./stop.sh
+docker-compose down
+# Delete volumes as well
+docker-compose down --volumes
 ```
 
 ## How to change and generate default genesis and configurations
