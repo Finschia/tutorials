@@ -74,5 +74,3 @@ ${FNSAD} gentx validator0 10000000000stake --home="${CHAIN_DIR}" --keyring-backe
 ${FNSAD} collect-gentxs --home="${CHAIN_DIR}"
 
 ${FNSAD} validate-genesis --home="${CHAIN_DIR}"
-
-# ${FNSAD} start --log_level *:debug --rpc.laddr=tcp://0.0.0.0:26657 --p2p.laddr=tcp://0.0.0.0:26656
