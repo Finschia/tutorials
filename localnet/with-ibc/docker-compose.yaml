@@ -2,7 +2,6 @@ version: "3"
 
 services:
   finschia-app:
-    container_name: finschia-app
     image: "finschia/finschianode:1.0.0-dynamiclink2"
     ports:
       - "26657:26657"
@@ -16,7 +15,6 @@ services:
       - host.docker.internal:host-gateway
 
   finschia2-app:
-    container_name: finschia2-app
     image: "finschia/finschianode:1.0.0-dynamiclink2"
     ports:
       - "26557:26657"
@@ -30,7 +28,6 @@ services:
       - host.docker.internal:host-gateway
 
   relayer:
-    container_name: relayer
     image: "ghcr.io/cosmos/relayer:v2.3.1"
     depends_on:
       - finschia2-app
