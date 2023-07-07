@@ -11,6 +11,7 @@ GRPC_PORT_GUEST="9090"
 GRPC_PORT_HOST="9089"
 
 SCRIPT_DIR="$(realpath "$(dirname "$0")")"
+# shellcheck disable=SC1091
 # shellcheck source=env
 source "${SCRIPT_DIR}"/env
 
