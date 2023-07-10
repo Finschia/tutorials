@@ -8,8 +8,8 @@ SCRIPT_DIR="$(realpath "$(dirname "$0")")"
 # shellcheck disable=SC1091
 source "$SCRIPT_DIR"/../env
 
-CHAIN_ID="simd-testing"
-MONIKER="simd-testing"
+CHAIN_ID="finschia2-0"
+MONIKER="finschia2-0"
 CONFIG_DIR=${SCRIPT_DIR}/.finschia
 CHAIN_DIR=${CONFIG_DIR}
 
@@ -33,7 +33,7 @@ rm -rf "$CONFIG_DIR"
 
 # Initialize configuration files and genesis file
 # moniker is the name of your node
-${FNSAD} init simd-testing --chain-id=$CHAIN_ID --home="${CHAIN_DIR}"
+${FNSAD} init finschia2-0 --chain-id=$CHAIN_ID --home="${CHAIN_DIR}"
 
 # configure for testnet
 if [[ ${mode} == "testnet" ]]
@@ -64,10 +64,10 @@ ${FNSAD} keys add validator0 --home="${CHAIN_DIR}" --keyring-backend=test --reco
 # Add both accounts, with coins to the genesis file
 for ((i = 0; i < N; i++))
 do
-  ${FNSAD} add-genesis-account "$(${FNSAD} keys show account"${i}" -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony,20000000000stake --home="${CHAIN_DIR}"
+  ${FNSAD} add-genesis-account "$(${FNSAD} keys show account"${i}" -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000brown,20000000000stake --home="${CHAIN_DIR}"
 done
-${FNSAD} add-genesis-account "$(${FNSAD} keys show multisig0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony,20000000000stake --home="${CHAIN_DIR}"
-${FNSAD} add-genesis-account "$(${FNSAD} keys show validator0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony,20000000000stake --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show multisig0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000brown,20000000000stake --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show validator0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000brown,20000000000stake --home="${CHAIN_DIR}"
 
 ${FNSAD} gentx validator0 10000000000stake --home="${CHAIN_DIR}" --keyring-backend=test --chain-id=$CHAIN_ID --moniker=$MONIKER
 

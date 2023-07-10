@@ -4,11 +4,11 @@ command -v shellcheck >/dev/null && shellcheck "$0"
 
 # Please keep this in sync with the Ports overview in HACKING.md
 TENDERMINT_PORT_GUEST="26657"
-TENDERMINT_PORT_HOST="26457"
+TENDERMINT_PORT_HOST="26657"
 API_PORT_GUEST="1317"
-API_PORT_HOST="1316"
+API_PORT_HOST="1317"
 GRPC_PORT_GUEST="9090"
-GRPC_PORT_HOST="9089"
+GRPC_PORT_HOST="9090"
 
 SCRIPT_DIR="$(realpath "$(dirname "$0")")"
 # shellcheck disable=SC1091
@@ -21,7 +21,7 @@ echo "Using temporary dir $TMP_DIR"
 FINSCHIA_LOGFILE="$TMP_DIR/finschia.log"
 
 # Use a fresh volume for every start
-docker volume rm -f fnsad0_data
+docker volume rm -f fnsad_data
 
 docker run --rm \
   --name "$CONTAINER_NAME" \
@@ -29,7 +29,7 @@ docker run --rm \
   -p "$API_PORT_HOST":"$API_PORT_GUEST" \
   -p "$GRPC_PORT_HOST":"$GRPC_PORT_GUEST" \
   --mount type=bind,source="$SCRIPT_DIR/template",target=/template \
-  --mount type=volume,source=fnsad0_data,target=/root \
+  --mount type=volume,source=fnsad_data,target=/root \
   "$REPOSITORY:$VERSION" \
   /template/run_finschia.sh \
   >"$FINSCHIA_LOGFILE" 2>&1 &
