@@ -12,16 +12,22 @@ For this challenge, participants are encouraged to develop a CosmWasm contract. 
 * We value creativity over implementation. However, in the absence of originality, the completeness of the DApp becomes a crucial factor in the evaluation process.
 
 # Resources
-## 1. Finschia Binary
+## 1. Install the Finschia
 ```shell
+# Option 1) Build from source
 git clone --depth 1 --branch v1.0.0-dynamiclink2 git@github.com:Finschia/finschia.git
 make install
+
+# Option 2) Use Docker
+docker pull finschia/finschianode:1.0.0-dynamiclink2
 ```
 
-### 1-1. Using Localnet for Development
+## 2. Using Localnet for Development
 We support a single-chain environment, or a dual-chain environment with IBC for development. Please refer to the following [link](https://github.com/Finschia/hackathon/tree/main/localnet) for more information.
 
-### 1-2. Joining Testnet
+## 3. Joining Testnet
+Feel free to utilize our predeployed testnet for the development of your DApp. We would prefer to validate your DApp on our testnet before you submit it for judging. Additionally, we would appreciate if you could showcase it later during the judging process.
+
 |          Name           |     Type     | Address                                                      |
 | :---------------------: | :----------: | :----------------------------------------------------------- |
 |    ibc-base testnet     |   REST API   | https://hackwasm-node.finschia.network:1317                  |
@@ -31,7 +37,7 @@ We support a single-chain environment, or a dual-chain environment with IBC for 
 |                         |     gRPC     | https://hackwasm-ibc-counterpart-node.finschia.network:9090  |
 |                         | Ostracon RPC | https://hackwasm-ibc-counterpart-node.finschia.network:26657 |
 
-## 2. Useful Links
-- [Dashborad](https://fnsadash.landpress.line.me)
+## 4. Useful Links
+- [Dashborad](https://fnsadash.finschia.network)
 - [DOSI Vault Guide](../dosi-vault/README.md)
 - [Smart Contract Guide](https://docs.finschia.network/smart-contract/introduction)
