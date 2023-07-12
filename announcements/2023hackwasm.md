@@ -15,11 +15,11 @@ For this challenge, participants are encouraged to develop a CosmWasm contract. 
 ## 1. Install the Finschia
 ```shell
 # Option 1) Build from source
-git clone --depth 1 --branch v1.0.0-dynamiclink2 git@github.com:Finschia/finschia.git
+git clone --depth 1 --branch v1.0.0-dynamiclink3 git@github.com:Finschia/finschia.git
 make install
 
 # Option 2) Use Docker
-docker pull finschia/finschianode:1.0.0-dynamiclink2
+docker pull finschia/finschianode:1.0.0-dynamiclink3
 ```
 
 ## 2. Using Localnet for Development
