@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  finschia:
+    image: "finschia/finschianode:1.0.0-dynamiclink3"
+    ports:
+      - "26657:26657"
+      - "1317:1317"
+      - "9090:9090"
+    volumes:
+      - "./template:/template"
+      - "single_fnsad_data:/root"
+    entrypoint: /template/run_finschia.sh
+
+volumes:
+  single_fnsad_data:
