@@ -59,17 +59,20 @@ done
 ${FNSAD} keys add multisig0 --home="${CHAIN_DIR}" --keyring-backend=test --multisig account0,account1,account2,account3,account4 --multisig-threshold 2
 # generate validator key
 ${FNSAD} keys add validator0 --home="${CHAIN_DIR}" --keyring-backend=test --recover --account=1 <<< "${TEST_MNEMONIC}"
+# generate faucet key
+${FNSAD} keys add faucet --home="${CHAIN_DIR}" --keyring-backend=test --recover --account=2 <<< "${TEST_MNEMONIC}"
 
 
 # Add both accounts, with coins to the genesis file
 for ((i = 0; i < N; i++))
 do
-  ${FNSAD} add-genesis-account "$(${FNSAD} keys show account"${i}" -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony,20000000000stake --home="${CHAIN_DIR}"
+  ${FNSAD} add-genesis-account "$(${FNSAD} keys show account"${i}" -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony --home="${CHAIN_DIR}"
 done
-${FNSAD} add-genesis-account "$(${FNSAD} keys show multisig0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony,20000000000stake --home="${CHAIN_DIR}"
-${FNSAD} add-genesis-account "$(${FNSAD} keys show validator0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony,20000000000stake --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show multisig0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show validator0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000cony --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show faucet -a --home="${CHAIN_DIR}" --keyring-backend=test)" 1000000000000cony --home="${CHAIN_DIR}"
 
-${FNSAD} gentx validator0 10000000000stake --home="${CHAIN_DIR}" --keyring-backend=test --chain-id=$CHAIN_ID --moniker=$MONIKER
+${FNSAD} gentx validator0 10000000000cony --home="${CHAIN_DIR}" --keyring-backend=test --chain-id=$CHAIN_ID --moniker=$MONIKER
 
 ${FNSAD} collect-gentxs --home="${CHAIN_DIR}"
 
