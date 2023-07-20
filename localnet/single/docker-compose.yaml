@@ -12,5 +12,10 @@ services:
       - "single_fnsad_data:/root"
     entrypoint: /template/run_finschia.sh
 
+  explorer:
+    image: "zemyblue/finschia_local_scan:0.1.0"
+    ports:
+      - "8080:8080"
+
 volumes:
   single_fnsad_data:
