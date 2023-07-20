@@ -35,6 +35,7 @@ docker run --rm \
   >"$FINSCHIA_LOGFILE" 2>&1 &
 
 echo "fnsad running on http://localhost:$TENDERMINT_PORT_HOST and logging into $FINSCHIA_LOGFILE"
+echo "swagger is enabled on http://localhost:$API_PORT_HOST/swagger/#/"
 
 if [ -n "${CI:-}" ]; then
   # Give process some time to come alive. No idea why this helps. Needed for CI.
