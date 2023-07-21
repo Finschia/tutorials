@@ -40,7 +40,7 @@ docker-compose down
 
 ## Accounts
 
-Through setup.sh, 11 accounts added to genesis. Every account are derived from same mnemonic (`mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have`) and every account have same amount of balances (`100000000000cony`).
+Through setup.sh, 11 accounts added to genesis. Every account is derived from the same mnemonic (`mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have`) and every account has the same amount of balances (`100000000000cony`).
 
 - 1 validator account : hdpath(44/438/1/0/0)
 - 1 faucet account: hdpath(44/438/2/0/0)
