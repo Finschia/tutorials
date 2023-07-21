@@ -4,11 +4,11 @@ command -v shellcheck >/dev/null && shellcheck "$0"
 
 # Please keep this in sync with the Ports overview in HACKING.md
 TENDERMINT_PORT_GUEST="26657"
-TENDERMINT_PORT_HOST="26457"
+TENDERMINT_PORT_HOST="26657"
 API_PORT_GUEST="1317"
-API_PORT_HOST="1316"
+API_PORT_HOST="1317"
 GRPC_PORT_GUEST="9090"
-GRPC_PORT_HOST="9089"
+GRPC_PORT_HOST="9090"
 
 SCRIPT_DIR="$(realpath "$(dirname "$0")")"
 # shellcheck disable=SC1091
@@ -35,6 +35,7 @@ docker run --rm \
   >"$FINSCHIA_LOGFILE" 2>&1 &
 
 echo "fnsad running on http://localhost:$TENDERMINT_PORT_HOST and logging into $FINSCHIA_LOGFILE"
+echo "swagger is enabled on http://localhost:$API_PORT_HOST/swagger/#/"
 
 if [ -n "${CI:-}" ]; then
   # Give process some time to come alive. No idea why this helps. Needed for CI.

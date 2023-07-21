@@ -2,7 +2,7 @@
 
 ### Requirements
 
-- Required: docker
+- Required: docker, docker-compose
 
 ## Starting the blockchain
 
@@ -20,6 +20,19 @@
 ./stop.sh
 ```
 
+## Run with docker-compose
+```shell
+# Start the finschia node and explorer and faucet
+docker-compose up
+
+# Stop 
+docker-compose down
+```
+* localnet dashboard: http://localhost:8000
+* faucet: http://localhost:8081
+* swagger: http://localhost:1317/swagger/#/
+* explorer: http://localhost:8080
+
 ## How to change and generate default genesis and configurations
 
 1. change the docker image you want in the `./single/env` file.
@@ -31,8 +44,9 @@
 
 ## Accounts
 
-Through setup.sh, 11 accounts added to genesis. Every accounts are derived from same mnemonic (`mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have`) and every accounts have same amount of balances (`100000000000cony,20000000000stake`).
+Through setup.sh, 11 accounts added to genesis. Every account is derived from the same mnemonic (`mind flame tobacco sense move hammer drift crime ring globe art gaze cinnamon helmet cruise special produce notable negative wait path scrap recall have`) and every account has the same amount of balances (`100000000000cony`).
 
 - 1 validator account : hdpath(44/438/1/0/0)
+- 1 faucet account: hdpath(44/438/2/0/0)
 - 9 ordinary account: hdpath(44/438/0/0/0~8)
 - 1 multisig account: multisig of account0,account1,account2,account3,account4 and threshold is 2.
