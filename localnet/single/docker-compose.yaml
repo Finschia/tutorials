@@ -27,7 +27,7 @@ services:
     depends_on:
       - "finschia"
     ports:
-      - "8000:8000"
+      - "8081:8000"
     environment:
       FAUCET_ADDRESS_PREFIX: link
       FAUCET_TOKENS: cony
@@ -41,6 +41,15 @@ services:
     networks:
       - single_node
     command: start "finschia:26657"
+
+  dashboard:
+    image: "zemyblue/finschia_local_dashboard:0.1.0"
+    depends_on:
+      - "finschia"
+      - "explorer"
+      - "faucet"
+    ports:
+      - "8000:8000"
 
 volumes:
   single_fnsad_data:
