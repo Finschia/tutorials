@@ -28,6 +28,10 @@ docker-compose up
 # Stop 
 docker-compose down
 ```
+* localnet dashboard: http://localhost:8000
+* faucet: http://localhost:8081
+* swagger: http://localhost:1317/swagger/#/
+* explorer: http://localhost:8080
 
 ## How to change and generate default genesis and configurations
 
