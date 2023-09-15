@@ -37,7 +37,7 @@ docker-compose down
 
 1. change the docker image you want in the `./single/env` file.
 2. cd `./single/template`.
-3. execute `setup.sh docker`.
+3. execute `./setup.sh docker`.
 4. check the difference of `app.toml`, `client.toml`, `config.toml` and
    `genesis.json` in the `./single/template/.finschia/config` directory
    and select the code you want.
