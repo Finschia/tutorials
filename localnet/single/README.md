@@ -22,8 +22,8 @@
 
 ## Run with docker-compose
 ```shell
-# Start the finschia node and explorer and faucet
-docker-compose up
+# Start the finschia node and explorer and faucet and dashboard in background mode
+docker-compose up -d
 
 # Stop 
 docker-compose down
