@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-07-20T13:37:54.935315Z",
+  "genesis_time": "2023-10-24T09:17:13.171976667Z",
   "chain_id": "simd-testing",
   "initial_height": "1",
   "consensus_params": {
@@ -248,16 +248,18 @@
             {
               "denom": "cony",
               "exponent": 0,
-              "aliases": []
+              "aliases": ["microfinschia"]
             },
             {
-              "denom": "FNSA",
+              "denom": "finschia",
               "exponent": 6,
               "aliases": []
             }
           ],
-          "base": "FNSA",
-          "display": "FNSA"
+          "base": "cony",
+          "display": "finschia",
+          "name": "FINSCHIA",
+          "symbol": "FNSA"
         }
       ]
     },
