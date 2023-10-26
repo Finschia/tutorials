@@ -2,7 +2,7 @@ version: "3"
 
 services:
   finschia:
-    image: "finschia/finschianode:1.0.0-dynamiclink3"
+    image: "finschia/finschianode:2.0.0"
     ports:
       - "26657:26657"
       - "1317:1317"
@@ -15,7 +15,7 @@ services:
     entrypoint: /template/run_finschia.sh
 
   explorer:
-    image: "zemyblue/finschia_local_scan:0.1.0"
+    image: "zemyblue/finschia_local_scan:0.2.0"
     depends_on:
       - "finschia"
     entrypoint: "serve -s -l 8080"
