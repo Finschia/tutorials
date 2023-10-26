@@ -12,7 +12,7 @@ CHAIN_ID="simd-testing"
 MONIKER="simd-testing"
 CONFIG_DIR=${SCRIPT_DIR}/.finschia
 CHAIN_DIR=${CONFIG_DIR}
-DEMON="cony"
+DENOM="cony"
 
 if [[ $1 == "docker" ]]
 then
@@ -67,18 +67,18 @@ ${FNSAD} keys add faucet --home="${CHAIN_DIR}" --keyring-backend=test --recover 
 # Add both accounts, with coins to the genesis file
 for ((i = 0; i < N; i++))
 do
-  ${FNSAD} add-genesis-account "$(${FNSAD} keys show account"${i}" -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000$DEMON --home="${CHAIN_DIR}"
+  ${FNSAD} add-genesis-account "$(${FNSAD} keys show account"${i}" -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000$DENOM --home="${CHAIN_DIR}"
 done
-${FNSAD} add-genesis-account "$(${FNSAD} keys show multisig0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000$DEMON --home="${CHAIN_DIR}"
-${FNSAD} add-genesis-account "$(${FNSAD} keys show validator0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000$DEMON --home="${CHAIN_DIR}"
-${FNSAD} add-genesis-account "$(${FNSAD} keys show faucet -a --home="${CHAIN_DIR}" --keyring-backend=test)" 1000000000000$DEMON --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show multisig0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000$DENOM --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show validator0 -a --home="${CHAIN_DIR}" --keyring-backend=test)" 100000000000$DENOM --home="${CHAIN_DIR}"
+${FNSAD} add-genesis-account "$(${FNSAD} keys show faucet -a --home="${CHAIN_DIR}" --keyring-backend=test)" 1000000000000$DENOM --home="${CHAIN_DIR}"
 
-${FNSAD} gentx validator0 10000000000$DEMON --home="${CHAIN_DIR}" --keyring-backend=test --chain-id=$CHAIN_ID --moniker=$MONIKER
+${FNSAD} gentx validator0 10000000000$DENOM --home="${CHAIN_DIR}" --keyring-backend=test --chain-id=$CHAIN_ID --moniker=$MONIKER
 
 ${FNSAD} collect-gentxs --home="${CHAIN_DIR}"
 
 ${FNSAD} validate-genesis --home="${CHAIN_DIR}"
 
 # Change default coin
-perl -pi -e "s/stake/$DEMON/g" .finschia/config/genesis.json
-perl -pi -e "s/stake/$DEMON/g" .finschia/config/app.toml
+perl -pi -e "s/stake/$DENOM/g" .finschia/config/genesis.json
+perl -pi -e "s/stake/$DENOM/g" .finschia/config/app.toml
