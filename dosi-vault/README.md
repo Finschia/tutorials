@@ -9,10 +9,10 @@
 
 
 
-> DOSI Valut was forked from Keplr. Therefore, please refer to [this](https://docs.keplr.app/api/) documentation for information not described here.
+> DOSI Vault was forked from Keplr. Therefore, please refer to [this](https://docs.keplr.app/api/) documentation for information not described here.
 
 ## Check if DOSI Vault is installed in Chrome
-If [DOSI Valut](https://vault.dosi.world/) is installed in Chrome, `window` object always includes `dosiVault` object. Below is an example of checking the `dosiVault` object.
+If [DOSI Vault](https://vault.dosi.world/) is installed in Chrome, `window` object always includes `dosiVault` object. Below is an example of checking the `dosiVault` object.
 
 ```js
 if(!window.dosiVault){
@@ -23,7 +23,7 @@ if(!window.dosiVault){
 ```
 
 ## Activate DOSI Vault
-If you confirmed that DOSI Vault is already installed through above process, you can activate DOSI Vault with enable method. It asks to clients whether they allow to use DOSI Valut in that website.
+If you confirmed that DOSI Vault is already installed through above process, you can activate DOSI Vault with enable method. It asks to clients whether they allow to use DOSI Vault in that website.
 
 ```js
 const chainId = "finschia";
