@@ -41,6 +41,7 @@ services:
     networks:
       - single_node
     command: start "finschia:26657"
+    restart: on-failure
 
   dashboard:
     image: "zemyblue/finschia_local_dashboard:0.1.0"
