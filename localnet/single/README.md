@@ -1,4 +1,4 @@
-# Local finschia single node development network
+# Local Finschia single node development network
 
 ### Requirements
 
