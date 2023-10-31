@@ -1,4 +1,4 @@
-# Local finschia nodes with IBC development network
+# Local Finschia nodes with IBC development network
 
 ### Requirements
 
