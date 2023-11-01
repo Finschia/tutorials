@@ -2,7 +2,7 @@
 
 These are tutorials for Finschia developers.
 
-### Development Local Node Setting
+### Local Node Setting for development
 * [Local Finschia single node development network](./localnet/single/README.md)
 * [Local Finschia nodes with IBC development network](./localnet/with-ibc/README.md)
 
