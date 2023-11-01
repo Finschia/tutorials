@@ -39,5 +39,4 @@ Feel free to utilize our predeployed testnet for the development of your DApp. W
 
 ## 4. Useful Links
 - [Dashborad](https://fnsadash.finschia.network)
-- [DOSI Vault Guide](../dosi-vault/README.md)
 - [Smart Contract Guide](https://docs.finschia.network/smart-contract/introduction)

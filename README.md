@@ -7,5 +7,4 @@ These are tutorials for Finschia developers.
 * [Local Finschia nodes with IBC development network](./localnet/with-ibc/README.md)
 
 ### Wallet Connection Guide
-* [DOSI Vault Guide](./dosi-vault/README.md)
 * [Keplr Guide](./keplr/README.md)
