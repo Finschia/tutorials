@@ -23,17 +23,17 @@ window.onload = async () => {
   await window.dosiVault.enable(chainInfo.chainId);
 };
 
+setInterval(fetchLatestHeight, 2000);
+
 function fetchLatestHeight() {
-  (async () => {
-    fetch(`${chainInfo.rest}/cosmos/base/tendermint/v1beta1/blocks/latest`)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log("height: ", res.block.header.height);
+  fetch(`${chainInfo.rest}/cosmos/base/tendermint/v1beta1/blocks/latest`)
+  .then(res => res.json())
+  .then(res => {
+      console.log("height: ", res.block.header.height);
     })
-      .catch((error) => {
-        console.error("Error: ", error);
-    });
-  })();
+  .catch((error) => {
+    console.error("Error: ", error);
+  });
 }
 
 function getInputData() {
