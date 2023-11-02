@@ -15,7 +15,7 @@ services:
     entrypoint: /template/run_finschia.sh
 
   explorer:
-    image: "zemyblue/finschia_local_scan:0.2.0"
+    image: "zemyblue/finschia_local_scan:0.3.0"
     depends_on:
       - "finschia"
     entrypoint: "serve -s -l 8080"
@@ -44,7 +44,7 @@ services:
     restart: on-failure
 
   dashboard:
-    image: "zemyblue/finschia_local_dashboard:0.1.0"
+    image: "zemyblue/finschia_local_dashboard:0.2.0"
     depends_on:
       - "finschia"
       - "explorer"
