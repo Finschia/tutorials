@@ -23,7 +23,7 @@ docker pull finschia/finschianode:1.0.0-dynamiclink3
 ```
 
 ## 2. Using Localnet for Development
-We support a single-chain environment, or a dual-chain environment with IBC for development. Please refer to the following [link](https://github.com/Finschia/hackathon/tree/main/localnet) for more information.
+We support a single-chain environment, or a dual-chain environment with IBC for development. Please refer to the following [link](https://github.com/Finschia/tutorials/tree/main/localnet) for more information.
 
 ## 3. Joining Testnet
 Feel free to utilize our predeployed testnet for the development of your DApp. We would prefer to validate your DApp on our testnet before you submit it for judging. Additionally, we would appreciate if you could showcase it later during the judging process.
