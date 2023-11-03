@@ -1,26 +1,25 @@
 import { assertIsDeliverTxSuccess } from "@cosmjs/stargate";
 import { SigningFinschiaClient, FinschiaClient } from "@finschia/finschia";
 import { TxRaw } from "@finschia/finschia-proto/cosmos/tx/v1beta1/tx";
-import "../dosivault-logo.png";
 
 import { chainInfo, linkCurrency } from "./local-chain-info";
 
 window.onload = async () => {
-  if (!window.dosiVault) {
-    alert("Please install dosiVault extension");
+  if (!window.keplr) {
+    alert("Please install keplr extension");
   } else {
-    if (window.dosiVault.experimentalSuggestChain) {
+    if (window.keplr.experimentalSuggestChain) {
       try {
-        await window.dosiVault.experimentalSuggestChain(chainInfo);
+        await window.keplr.experimentalSuggestChain(chainInfo);
       } catch {
         alert("Failed to suggest the chain");
       }
     } else {
-      alert("Please use the recent version of dosiVault extension");
+      alert("Please use the recent version of keplr extension");
     }
   }
 
-  await window.dosiVault.enable(chainInfo.chainId);
+  await window.keplr.enable(chainInfo.chainId);
 };
 
 function getInputData() {
@@ -59,8 +58,8 @@ function submitOnClicked(e) {
 
   if (buttonId === "Broadcast-with-finschia-js") {
     (async () => {
-      await window.dosiVault.enable(chainInfo.chainId);
-      const offlineSigner = window.dosiVault.getOfflineSigner(
+      await window.keplr.enable(chainInfo.chainId);
+      const offlineSigner = window.keplr.getOfflineSigner(
         chainInfo.chainId
       );
       const accounts = await offlineSigner.getAccounts();
@@ -85,10 +84,10 @@ function submitOnClicked(e) {
         alert("Succeed to send tx:" + result.transactionHash);
       }
     })();
-  } else if (buttonId === "Broadcast-with-dosivault") {
+  } else if (buttonId === "Broadcast-with-keplr") {
     (async () => {
-      await window.dosiVault.enable(chainInfo.chainId);
-      const offlineSigner = window.dosiVault.getOfflineSigner(
+      await window.keplr.enable(chainInfo.chainId);
+      const offlineSigner = window.keplr.getOfflineSigner(
         chainInfo.chainId
       );
       const accounts = await offlineSigner.getAccounts();
@@ -111,7 +110,7 @@ function submitOnClicked(e) {
         accounts[0].address,
         [sendMsg],
         fee,
-        "for broadcasting with dosi vault",
+        "for broadcasting with keplr",
         {
           accountNumber: accountOnChain.accountNumber,
           sequence: accountOnChain.sequence,
@@ -120,7 +119,7 @@ function submitOnClicked(e) {
       );
       const txBytes = TxRaw.encode(txRaw).finish();
 
-      const result = await window.dosiVault.sendTx(
+      const result = await window.keplr.sendTx(
         chainInfo.chainId,
         txBytes,
         "sync"
@@ -133,4 +132,4 @@ function submitOnClicked(e) {
 }
 
 document.getElementById("Broadcast-with-finschia-js").onclick = submitOnClicked;
-document.getElementById("Broadcast-with-dosivault").onclick = submitOnClicked;
+document.getElementById("Broadcast-with-keplr").onclick = submitOnClicked;

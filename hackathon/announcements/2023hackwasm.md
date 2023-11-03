@@ -23,13 +23,13 @@ docker pull finschia/finschianode:1.0.0-dynamiclink3
 ```
 
 ## 2. Using Localnet for Development
-We support a single-chain environment, or a dual-chain environment with IBC for development. Please refer to the following [link](https://github.com/Finschia/hackathon/tree/main/localnet) for more information.
+We support a single-chain environment, or a dual-chain environment with IBC for development. Please refer to the following [link](https://github.com/Finschia/tutorials/tree/main/localnet) for more information.
 
 ## 3. Joining Testnet
 Feel free to utilize our predeployed testnet for the development of your DApp. We would prefer to validate your DApp on our testnet before you submit it for judging. Additionally, we would appreciate if you could showcase it later during the judging process.
 
 |          Name           |     Type     | Address                                                      |
-| :---------------------: | :----------: | :----------------------------------------------------------- |
+|:-----------------------:|:------------:|:-------------------------------------------------------------|
 |    ibc-base testnet     |   REST API   | https://hackwasm-node.finschia.network:1317                  |
 |                         |     gRPC     | https://hackwasm-node.finschia.network:9090                  |
 |                         | Ostracon RPC | https://hackwasm-node.finschia.network:26657                 |
@@ -39,5 +39,5 @@ Feel free to utilize our predeployed testnet for the development of your DApp. W
 
 ## 4. Useful Links
 - [Dashborad](https://fnsadash.finschia.network)
-- [DOSI Vault Guide](../dosi-vault/README.md)
+- [Keplr Guide](../../keplr/README.md)
 - [Smart Contract Guide](https://docs.finschia.network/smart-contract/introduction)

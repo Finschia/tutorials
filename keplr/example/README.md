@@ -1,6 +1,6 @@
-# Dosi vault Example
+# Keplr Example
 
-This is a simple example if how to Dosi vault extension injects the offline signer that is compatible with [finschia-js](https://github.com/Finschia/finschia-js).
+This is a simple example if how to Keplr extension injects the offline signer that is compatible with [finschia-js](https://github.com/Finschia/finschia-js).
 
 ![](splash.png)
 
@@ -22,11 +22,11 @@ npm run dev
 
 ### Add chain info
 
-Currently, the dosi-vault-example defaults to using local running chains. To change chain information, change local-chain-info.js or change chainInfo in main.js.
+Currently, the keplr-example defaults to using local running chains. To change chain information, change local-chain-info.js or change chainInfo in main.js.
 
 ### Open CORS in toml
 
-Because dosi-vault uses both rpc and rest, both endpoints must be open for CORS.
+Because keplr uses both rpc and rest, both endpoints must be open for CORS.
 
 Open rpc for CORS in config.toml
 

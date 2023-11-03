@@ -1,37 +1,37 @@
-# DOSI Vault Guide
+# Keplr Guide
 
-1. [Check if DOSI Vault is installed in Chrome](#check-if-dosi-vault-is-installed-in-chrome)
-2. [Activate DOSI Vault](#activate-dosi-vault)
+1. [Check if Keplr is installed in Chrome](#check-if-keplr-is-installed-in-chrome)
+2. [Activate Keplr](#activate-keplr)
 3. [Register New Chain](#register-new-chain)
 4. [Sign a Transaction](#sign-a-transaction)
-5. [Broadcast a transaction using DOSI Vault](#broadcast-a-transaction-using-dosi-vault)
+5. [Broadcast a transaction using Keplr](#broadcast-a-transaction-using-keplr)
 6. [Integrate with FinschiaJS](#integrate-with-finschiajs)
 
 
 
-> DOSI Vault was forked from Keplr. Therefore, please refer to [this](https://docs.keplr.app/api/) documentation for information not described here.
+> This document is a reorganization of the keplr document. Therefore, please refer to [this](https://docs.keplr.app/api/) documentation for information not described here.
 
-## Check if DOSI Vault is installed in Chrome
-If [DOSI Vault](https://vault.dosi.world/) is installed in Chrome, `window` object always includes `dosiVault` object. Below is an example of checking the `dosiVault` object.
+## Check if Keplr is installed in Chrome
+If [Keplr](https://www.keplr.app) is installed in Chrome, `window` object always includes `keplr` object. Below is an example of checking the `keplr` object.
 
 ```js
-if(!window.dosiVault){
-    alert("Please install dosi vault extension");
+if(!window.keplr){
+    alert("Please install keplr extension");
 } else {
-    console.log(window.dosiVault);
+    console.log(window.keplr);
 }
 ```
 
-## Activate DOSI Vault
-If you confirmed that DOSI Vault is already installed through above process, you can activate DOSI Vault with enable method. It asks to clients whether they allow to use DOSI Vault in that website.
+## Activate Keplr
+If you confirmed that Keplr is already installed through above process, you can activate Keplr with enable method. It asks to clients whether they allow to use Keplr in that website.
 
 ```js
 const chainId = "finschia";
-await window.dosiVault.enable(chainId);
+await window.keplr.enable(chainId);
 ```
 
 ## Register New Chain
-You can register new chain on DOSI Vault through `experimentalSuggestchain` method.
+You can register new chain on Keplr through `experimentalSuggestchain` method.
 
 ```ts
 experimentalSuggestChain(chainInfo: ChainInfo): Promise<void>
@@ -83,7 +83,7 @@ export interface ChainInfo {
 Below is the example code for `experimentalSuggestChain`
 
 ```ts
-await window.dosiVault.experimentalSuggestChain({
+await window.keplr.experimentalSuggestChain({
     chainId: "finschia-2",
     chainName: "Finschia",
     rpc: "http://123.456.789.012:26657",
@@ -130,10 +130,10 @@ await window.dosiVault.experimentalSuggestChain({
 ```
 
 ## Sign a Transaction
- DOSI Vault provides the signDirect method for signing a transaction. If you're wondering how to make a signDoc, see [this](https://docs.finschia.network/node-management/interaction-with-finschia/using-javascript#create-a-transaction) content.
+ Keplr provides the signDirect method for signing a transaction. If you're wondering how to make a signDoc, see [this](https://docs.finschia.network/node-management/interaction-with-finschia/using-javascript#create-a-transaction) content.
 
 ```ts
-// window.dosiVault.signDirect
+// window.keplr.signDirect
 signDirect(chainId:string, signer:string, signDoc: {
     /** SignDoc bodyBytes */
     bodyBytes?: Uint8Array | null;
@@ -150,11 +150,11 @@ signDirect(chainId:string, signer:string, signDoc: {
 
 ```
 
-## Broadcast a transaction using DOSI Vault
-DOSI Vault provides sendTx method for broadcasting a transaction. This method returns the hash value of the transaction if it's broadcasted successfully and returns error if not. If you're wondering how to make a tyBytes, see [this](https://docs.finschia.network/node-management/interaction-with-finschia/using-javascript#create-a-transaction) content.
+## Broadcast a transaction using Keplr
+Keplr provides sendTx method for broadcasting a transaction. This method returns the hash value of the transaction if it's broadcasted successfully and returns error if not. If you're wondering how to make a tyBytes, see [this](https://docs.finschia.network/node-management/interaction-with-finschia/using-javascript#create-a-transaction) content.
 
 ```ts
-// window.dosiVault.sendTx
+// window.keplr.sendTx
 sendTx(
     chainId: string,
     tx: Uint8Array,
@@ -164,12 +164,12 @@ sendTx(
 ```
 
 ## Use with FinschiaJS
-You can use `FinschiaJS` to send a transaction instead of the built-in `sendTx` method in DOSI Vault. `@finschia/finschia` provides [FinschiaClient](https://github.com/Finschia/finschia-js/blob/175cb196819837010d425d8c7c794723e306f181/packages/finschia/src/finschiaclient.ts#L136) and [SigningFinschiaClient](https://github.com/Finschia/finschia-js/blob/main/packages/finschia/src/signingfinschiaclient.ts#L104). See detail usage of SigningFinschiaClient [here](https://github.com/Finschia/finschia-js/blob/main/packages/finschia/src/signingfinschiaclient.spec.ts).
+You can use `FinschiaJS` to send a transaction instead of the built-in `sendTx` method in Keplr. `@finschia/finschia` provides [FinschiaClient](https://github.com/Finschia/finschia-js/blob/175cb196819837010d425d8c7c794723e306f181/packages/finschia/src/finschiaclient.ts#L136) and [SigningFinschiaClient](https://github.com/Finschia/finschia-js/blob/main/packages/finschia/src/signingfinschiaclient.ts#L104). See detail usage of SigningFinschiaClient [here](https://github.com/Finschia/finschia-js/blob/main/packages/finschia/src/signingfinschiaclient.spec.ts).
 
 ```ts
-const offlineSigner = window.dosiVault.getOfflineSigner(chainId);
+const offlineSigner = window.keplr.getOfflineSigner(chainId);
  
-// Initialize the finschia api with the offline signer that is injected by dosi vault extension.
+// Initialize the finschia api with the offline signer that is injected by keplr extension.
 const signingFinschiaClient = new SigningFinschiaClient.connectWithSigner(
     "http://123.456.789.012:26657",
     offlineSigner,
