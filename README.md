@@ -8,3 +8,6 @@ These are tutorials for Finschia developers.
 
 ### Wallet Connection Guide
 * [Keplr Guide](./keplr/README.md)
+
+### Smart Contract Samples
+* [Samples](./contracts/README.md)
