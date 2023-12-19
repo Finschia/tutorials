@@ -14,7 +14,7 @@ Collection of samples to help you develop smart contracts on Finschia.
 * [Read-Write State](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/read-write-state): Smart contract that explains the basics of reading and writing to the state in a smart contract.
 * [Responses and Attributes in CosmWasm](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/responses-attributes): Smart contract that explains the basics of responses and attributes. 
 * [CosmWasm Maths Operations](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/cosmwasm-math): This is a example of a CosmWasm contract that implements simple maths operations like addition, substraction, multiplication, division, modulo and exponential.
-* [Receive cw20 Tokens in Your Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/recieving-cw20-tokens): An example of a CosmWasm contract that implements the Cw20 Receiver Interface.
+* [Receive cw20 Tokens in Your Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/recieving-cw20-tokens): An example of a CosmWasm contract that implements the cw20 Receiver Interface.
 
 ### Application Samples
 * [Timelock](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/timelock): Timelock is a smart contract that introduces a delay mechanism for executing function calls on other smart contracts.
