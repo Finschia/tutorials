@@ -45,7 +45,7 @@ Collection of samples to help you develop smart contracts on Finschia.
 * [cw721 Fixed Price](https://github.com/CosmWasm/cw-nfts/tree/main/contracts/cw721-fixed-price): This contract enables the creation of limited edition fixed price NFTs according to the cw721 token standard.
 * [cw721 Metadata Onchain](https://github.com/CosmWasm/cw-nfts/tree/main/contracts/cw721-metadata-onchain): NFT creators may want to store their NFT metadata on-chain so other contracts are able to interact with it. With cw721-Base in CosmWasm, we allow you to store any data on chain you wish, using a generic extension: T.
 * [SBT](https://github.com/CosmWasm/cw-nfts/tree/main/contracts/cw721-non-transferable): This is an implementation of the SBT contract.
-* [CW-2981 Token-level Royalties](https://github.com/CosmWasm/cw-nfts/tree/main/contracts/cw2981-royalties): An example of porting EIP-2981 to implement royalties at a token mint level.
+* [cw-2981 Token-level Royalties](https://github.com/CosmWasm/cw-nfts/tree/main/contracts/cw2981-royalties): An example of porting EIP-2981 to implement royalties at a token mint level.
 
 ## CosmWasm Projects
 These projects/contracts are developed and maintained by CosmWasm community.
