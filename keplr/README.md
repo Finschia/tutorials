@@ -133,7 +133,7 @@ await window.keplr.experimentalSuggestChain({
     <summary>Finschia Prod chainInfo </summary>
 
 ```ts
-finschia_chainInfo = {
+const finschia_chainInfo = {
     chainId: "finschia-2",
     chainName: "Finschia",
     rpc: "https://finschia-rpc.finschia.io/",
