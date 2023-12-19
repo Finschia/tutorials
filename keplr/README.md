@@ -26,7 +26,7 @@ if(!window.keplr){
 If you confirmed that Keplr is already installed through above process, you can activate Keplr with enable method. It asks to clients whether they allow to use Keplr in that website.
 
 ```js
-const chainId = "finschia-2";
+const chainId = "ebony-2";
 await window.keplr.enable(chainId);
 ```
 
