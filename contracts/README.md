@@ -18,7 +18,7 @@ Collection of samples to help you develop smart contracts on Finschia.
 
 ### Application Samples
 * [Timelock](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/timelock): Timelock is a smart contract that introduces a delay mechanism for executing function calls on other smart contracts.
-* [English-Auction Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/dutch-auction): The Dutch Auction Contract is a smart contract implementation that enables the creation and execution of Dutch Auctions. 
+* [Dutch Auction Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/dutch-auction): The Dutch Auction Contract is a smart contract implementation that enables the creation and execution of Dutch Auctions. 
 * [Crowdfunding Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/crowdfunding): Crowdfunding contract that enables users to fund projects, but only if they reach their funding goals by a set deadline.
 * [Vault Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/token-vault): This contract represents a vault that allows users to deposit and withdraw tokens. It uses the cw20 token standard and maintains a mapping of user balances.
 * [Constant Sum AMM](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/constant-sum-amm): This contract is a Constant sum automatic market maker (AMM) for the CosmWasm smart contract engine.
