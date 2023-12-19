@@ -21,10 +21,8 @@ Collection of samples to help you develop smart contracts on Finschia.
 * [English-Auction Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/dutch-auction): The Dutch Auction Contract is a smart contract implementation that enables the creation and execution of Dutch Auctions. 
 * [Crowdfunding Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/crowdfunding): Crowdfunding contract that enables users to fund projects, but only if they reach their funding goals by a set deadline.
 * [Vault Contract](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/token-vault): This contract represents a vault that allows users to deposit and withdraw tokens. It uses the cw20 token standard and maintains a mapping of user balances.
-
 * [Constant Sum AMM](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/constant-sum-amm): This contract is a Constant sum automatic market maker (AMM) for the CosmWasm smart contract engine.
 * [Constant Product AMM](https://github.com/athena-consulting/cosmwasm-by-example/tree/main/constant-product-amm): This contract is a Constant product automatic market maker (AMM) for the CosmWasm smart contract engine.
-
 * [CosmWasm Quadratic Funding](https://github.com/deus-labs/cw-contracts/tree/main/contracts/cw-quadratic-funding): Quadratic Funding Round Contract
 * [To Do List](https://github.com/deus-labs/cw-contracts/tree/main/contracts/cw-to-do-list): A simple To-Do List contract
 * [Escrow](https://github.com/deus-labs/cw-contracts/tree/main/contracts/escrow): This is a simple single-use escrow contract.
