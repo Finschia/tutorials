@@ -26,7 +26,7 @@ if(!window.keplr){
 If you confirmed that Keplr is already installed through above process, you can activate Keplr with enable method. It asks to clients whether they allow to use Keplr in that website.
 
 ```js
-const chainId = "finschia";
+const chainId = "ebony-2";
 await window.keplr.enable(chainId);
 ```
 
@@ -84,10 +84,60 @@ Below is the example code for `experimentalSuggestChain`
 
 ```ts
 await window.keplr.experimentalSuggestChain({
+  chainId: "ebony-2",
+  chainName: "Ebony",
+  rpc: "https://ebony-rpc.finschia.io",
+  rest: "https://ebony-api.finschia.io",
+  bip44: {
+    coinType: 438,
+  },
+  bech32Config: {
+    bech32PrefixAccAddr: "tlink",
+    bech32PrefixAccPub: "tlinkpub",
+    bech32PrefixValAddr: "tlinkvaloper",
+    bech32PrefixValPub: "tlinkvaloperpub",
+    bech32PrefixConsAddr: "tlinkvalcons",
+    bech32PrefixConsPub: "tlinkvalconspub",
+  },
+  currencies: [
+    {
+      coinDenom: "TFNSA",
+      coinMinimalDenom: "tcony",
+      coinDecimals: 6,
+      coinGeckoId: "link",
+    },
+  ],
+  feeCurrencies: [
+    {
+      coinDenom: "TFNSA",
+      coinMinimalDenom: "tcony",
+      coinDecimals: 6,
+      coinGeckoId: "link",
+      gasPriceStep: {
+        low: 0.015,
+        average: 0.015,
+        high: 0.015,
+      },
+    },
+  ],
+  stakeCurrency: {
+    coinDenom: "TFNSA",
+    coinMinimalDenom: "tcony",
+    coinDecimals: 6,
+    coinGeckoId: "link",
+  },
+});
+```
+
+<details>
+    <summary>Finschia Prod chainInfo </summary>
+
+```ts
+const finschia_chainInfo = {
     chainId: "finschia-2",
     chainName: "Finschia",
-    rpc: "http://123.456.789.012:26657",
-    rest: "http://123.456.789.012:1317",
+    rpc: "https://finschia-rpc.finschia.io/",
+    rest: "https://finschia-api.finschia.io",
     bip44: {
         coinType: 438,
     },
@@ -114,9 +164,9 @@ await window.keplr.experimentalSuggestChain({
             coinDecimals: 6,
             coinGeckoId: "link",
             gasPriceStep: {
-                low: 0.01,
-                average: 0.025,
-                high: 0.04,
+              low: 0.015,
+              average: 0.015,
+              high: 0.015,
             },
         },
     ],
@@ -126,8 +176,11 @@ await window.keplr.experimentalSuggestChain({
         coinDecimals: 6,
         coinGeckoId: "link",
     },
-});
+};
 ```
+
+</details>
+
 
 ## Sign a Transaction
  Keplr provides the signDirect method for signing a transaction. If you're wondering how to make a signDoc, see [this](https://docs.finschia.network/node-management/interaction-with-finschia/using-javascript#create-a-transaction) content.
@@ -171,7 +224,9 @@ const offlineSigner = window.keplr.getOfflineSigner(chainId);
  
 // Initialize the finschia api with the offline signer that is injected by keplr extension.
 const signingFinschiaClient = new SigningFinschiaClient.connectWithSigner(
-    "http://123.456.789.012:26657",
+    "https://ebony-rpc.finschia.io",
     offlineSigner,
 );
 ```
+
+> You can find the public node information of Finschia in [Finschia-docs](https://docs.finschia.network/node-management/interaction-with-finschia/overview#public-application-node).
