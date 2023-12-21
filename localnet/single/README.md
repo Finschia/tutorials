@@ -30,7 +30,7 @@
 
 ### Checking the faucets status
 ```shell
-curl http://localhost:8000/status
+curl http://localhost:8081/status
 ```
 
 ### Using the faucet
@@ -38,7 +38,7 @@ curl http://localhost:8000/status
 curl --header "Content-Type: application/json" \
 --request POST \
 --data '{"denom":"cony", "address":"link1pheah96n54rwnuu4xej9egwwggn3h8uvv7pjdu"}' \
-http://localhost:8000/credit
+http://localhost:8081/credit
 ```
 
 

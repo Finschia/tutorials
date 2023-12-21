@@ -18,7 +18,7 @@ docker run --read-only --rm -d \
 -e FAUCET_CONCURRENCY \
 -e FAUCET_PATH_PATTERN \
 -e FAUCET_MNEMONIC \
--p 8000:8000 \
+-p 8081:8000 \
 --platform=linux/amd64 \
 confio/faucet:0.29.0 \
 start "$DOCKER_HOST_IP:26657"
